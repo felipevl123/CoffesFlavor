@@ -16,12 +16,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Felipe\OneDrive\Documentos\Projetos\CoffesFlavor\CoffesFlavor
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/CarrinhoCompra/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9Db21wcmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Contato/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Produto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Produto/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/Components/CarrinhoCompraResumo/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FycmluaG9Db21wcmFSZXN1bW9cRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/Components/CategoriaMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcmlhTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/Error.cshtml]
@@ -30,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_Carousel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJvdXNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_ProdutosResumo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdXRvc1Jlc3Vtby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_ValidationScriptsPartial.cshtml]

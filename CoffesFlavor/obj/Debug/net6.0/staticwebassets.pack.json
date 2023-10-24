@@ -9,12 +9,20 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Coxinha.jpg",
       "PackagePath": "staticwebassets\\images\\Coxinha.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Envelope-icon24.png",
+      "PackagePath": "staticwebassets\\images\\Envelope-icon24.png"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Full-Cart-icon.ico",
+      "PackagePath": "staticwebassets\\images\\Full-Cart-icon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Home-iconred.png",
+      "PackagePath": "staticwebassets\\images\\Home-iconred.png"
     },
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Pão de queijo.jpg",
@@ -35,6 +43,30 @@
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\carousel13.jpg",
       "PackagePath": "staticwebassets\\images\\carousel13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\cart-5-16.ico",
+      "PackagePath": "staticwebassets\\images\\cart-5-16.ico"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\delete.png",
+      "PackagePath": "staticwebassets\\images\\delete.png"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\faleconosco1.jpg",
+      "PackagePath": "staticwebassets\\images\\faleconosco1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\phone-app-icon.png",
+      "PackagePath": "staticwebassets\\images\\phone-app-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\remove.png",
+      "PackagePath": "staticwebassets\\images\\remove.png"
     },
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\js\\site.js",

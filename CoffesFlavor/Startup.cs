@@ -1,4 +1,5 @@
 ﻿using CoffesFlavor.Context;
+using CoffesFlavor.Models;
 using CoffesFlavor.Repositories;
 using CoffesFlavor.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -21,8 +22,13 @@ public class Startup
 
         services.AddTransient<IProdutoRepository, ProdutoRepository>();
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
         services.AddControllersWithViews();
+
+        services.AddMemoryCache();
+        services.AddSession();
 
     }
 
@@ -44,10 +50,18 @@ public class Startup
 
         app.UseRouting();
 
+        app.UseSession();
+
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
         {
+            endpoints.MapControllerRoute(
+                name: "categoriaFiltro",
+                pattern: "Produto/{action}/{categoria?}",
+                defaults: new { Controller = "Produto", action = "List"});
+
+
             endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

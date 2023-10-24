@@ -1,4 +1,6 @@
-﻿using CoffesFlavor.Repositories.Interfaces;
+﻿using CoffesFlavor.Models;
+using CoffesFlavor.Repositories.Interfaces;
+using CoffesFlavor.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffesFlavor.Controllers
@@ -12,16 +14,64 @@ namespace CoffesFlavor.Controllers
             _produtoRepository = produtoRepository;
         }
 
-        public IActionResult List()
+        public IActionResult List(string categoria)
         {
-            var produtos = _produtoRepository.Produtos;
-            return View(produtos);
+            //ViewData["Titulo"] = "Todos os Produtos";
+            //ViewData["Data"] = DateTime.Now;
+            //var produtos = _produtoRepository.Produtos;
+            //var totalProdutos = produtos.Count();
+            //ViewBag.Total = "Total de produtos";
+            //ViewBag.TotalProdutos = totalProdutos;
+            //return View(produtos);
+
+            IEnumerable<Produto> produtos;
+            string categoriaAtual = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(categoria))
+            {
+                produtos = _produtoRepository.Produtos.OrderBy(p => p.ProdutoId);
+                categoriaAtual = "Todos os produtos";
+            }
+            else
+            {
+                //if(string.Equals("Normal", categoria, StringComparison.OrdinalIgnoreCase))
+                //{
+                //    produtos = _produtoRepository.Produtos
+                //        .Where(p => p.Categoria.CategoriaNome.Equals("Normal"))
+                //        .OrderBy(p => p.Nome);
+                //}
+                //else
+                //{
+                //    produtos = _produtoRepository.Produtos
+                //        .Where(p => p.Categoria.CategoriaNome.Equals("Natural"))
+                //        .OrderBy(p => p.Nome);
+                //}
+
+                produtos = _produtoRepository.Produtos
+                    .Where(c => c.Categoria.CategoriaNome.Equals(categoria))
+                    .OrderBy(c => c.Nome);
+
+                categoriaAtual = categoria;
+            }
+
+            var produtoListViewModel = new ProdutoListViewModel
+            {
+                Produtos = produtos,
+                CategoriaAtual = categoriaAtual,
+            };
+            
+
+            return View(produtoListViewModel);
+
         }
 
+        public IActionResult Details(int produtoId)
+        {
+            var produto = _produtoRepository.Produtos
+                .FirstOrDefault(p => p.ProdutoId == produtoId);
 
-
-
-
+            return View(produto);
+        }
 
     }
 }

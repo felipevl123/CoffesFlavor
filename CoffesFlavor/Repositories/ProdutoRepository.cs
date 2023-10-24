@@ -9,16 +9,17 @@ namespace CoffesFlavor.Repositories
     {
         private readonly AppDbContext _context;
 
-        public ProdutoRepository(AppDbContext context)
-        {
-            _context = context;
-        }
-
         public IEnumerable<Produto> Produtos => _context.Produtos.Include(c => c.Categoria);
 
         public IEnumerable<Produto> ProdutosPreferidos => _context.Produtos
             .Where(p => p.IsLanchePreferido)
             .Include(c => c.Categoria);
+
+        public ProdutoRepository(AppDbContext context)
+        {
+            _context = context;
+        }
+
 
         public Produto GetProdutoById(int produtoId)
         {
