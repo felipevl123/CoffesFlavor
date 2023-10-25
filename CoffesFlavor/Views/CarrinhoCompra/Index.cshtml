@@ -2,7 +2,7 @@
 
 <div class="Container">
 <div class="row">
-    <img src="~/images/Full-Cart-icon.ico"/>
+    <img src="~/images/Full-Cart-icon.png"/>
 
     <div>
         <h4>Seu carrinho de compras: </h4>
@@ -32,7 +32,7 @@
 
                         <td class="text-center">
                             <a asp-controller="CarrinhoCompra" 
-                            asp-action="RemoverItemDoCarrinhoCompra"
+                            asp-action="RemoverItemNoCarrinhoCompra"
                             asp-route-produtoId="@item.Produto.ProdutoId">
                             <img src="~/images/delete.png"/>
                             </a>

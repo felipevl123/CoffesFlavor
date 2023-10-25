@@ -17,8 +17,8 @@
       "PackagePath": "staticwebassets\\images\\Envelope-icon24.png"
     },
     {
-      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Full-Cart-icon.ico",
-      "PackagePath": "staticwebassets\\images\\Full-Cart-icon.ico"
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Full-Cart-icon.png",
+      "PackagePath": "staticwebassets\\images\\Full-Cart-icon.png"
     },
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Home-iconred.png",
@@ -31,6 +31,10 @@
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Torta de frango.jpg",
       "PackagePath": "staticwebassets\\images\\Torta de frango.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\adminarea.jpg",
+      "PackagePath": "staticwebassets\\images\\adminarea.jpg"
     },
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\carousel11.jpg",
@@ -61,8 +65,20 @@
       "PackagePath": "staticwebassets\\images\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\login_48.png",
+      "PackagePath": "staticwebassets\\images\\login_48.png"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\negado1.jpg",
+      "PackagePath": "staticwebassets\\images\\negado1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\phone-app-icon.png",
       "PackagePath": "staticwebassets\\images\\phone-app-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\registro1.jpg",
+      "PackagePath": "staticwebassets\\images\\registro1.jpg"
     },
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\remove.png",

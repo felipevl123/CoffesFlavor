@@ -2,6 +2,7 @@
 using CoffesFlavor.Models;
 using CoffesFlavor.Repositories.Interfaces;
 using CoffesFlavor.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffesFlavor.Controllers
@@ -33,6 +34,7 @@ namespace CoffesFlavor.Controllers
             return View(carrinhoCompraVM);
         }
 
+        [Authorize]
         public IActionResult AdicionarItemNoCarrinhoCompra(int produtoId)
         {
             var produtoSelecionado = _produtoRepository.Produtos
@@ -45,6 +47,7 @@ namespace CoffesFlavor.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public IActionResult RemoverItemNoCarrinhoCompra(int produtoId)
         {
             var produtoSelecionado = _produtoRepository.Produtos

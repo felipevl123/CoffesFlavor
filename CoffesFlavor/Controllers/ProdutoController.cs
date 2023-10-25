@@ -73,5 +73,34 @@ namespace CoffesFlavor.Controllers
             return View(produto);
         }
 
+        public ViewResult Search(string searchString)
+        {
+            IEnumerable<Produto> produtos;
+            string categoriaAtual = string.Empty;
+
+            if (string.IsNullOrEmpty(searchString))
+            {
+                produtos = _produtoRepository.Produtos.OrderBy(p => p.ProdutoId);
+                categoriaAtual = "Todos os Produtos";
+            }
+            else
+            {
+                produtos = _produtoRepository.Produtos
+                    .Where(p => p.Nome.ToLower().Contains(searchString.ToLower()));
+                if (produtos.Any())
+                    categoriaAtual = "Produtos";
+                else
+                    categoriaAtual = "Nenhum lanche foi encontrado";
+            }
+
+
+
+            return View("~/Views/Produto/List.cshtml", new ProdutoListViewModel
+            {
+                Produtos= produtos,
+                CategoriaAtual= categoriaAtual,
+            });
+        }
+
     }
 }
