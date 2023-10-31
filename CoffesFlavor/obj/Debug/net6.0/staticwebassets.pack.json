@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\Home-iconred.png"
     },
     {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Logo empresa sem fundo.png",
+      "PackagePath": "staticwebassets\\images\\Logo empresa sem fundo.png"
+    },
+    {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Pão de queijo.jpg",
       "PackagePath": "staticwebassets\\images\\Pão de queijo.jpg"
     },
@@ -75,6 +79,10 @@
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\phone-app-icon.png",
       "PackagePath": "staticwebassets\\images\\phone-app-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\produtos\\Cupcake.jpg",
+      "PackagePath": "staticwebassets\\images\\produtos\\Cupcake.jpg"
     },
     {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\registro1.jpg",

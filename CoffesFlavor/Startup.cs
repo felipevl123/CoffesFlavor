@@ -1,10 +1,12 @@
-﻿using CoffesFlavor.Context;
+﻿using CoffesFlavor.Areas.Admin.Servicos;
+using CoffesFlavor.Context;
 using CoffesFlavor.Models;
 using CoffesFlavor.Repositories;
 using CoffesFlavor.Repositories.Interfaces;
 using CoffesFlavor.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 
 namespace CoffesFlavor;
 public class Startup
@@ -26,10 +28,16 @@ public class Startup
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
 
+        services.Configure<ConfigurationImagens>(Configuration.GetSection("ConfigurationPastaImagens"));
+
         services.AddTransient<IProdutoRepository, ProdutoRepository>();
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+
+        services.AddScoped<RelatorioVendaService>();
+        services.AddScoped<GraficoVendasService>();
+
         services.AddAuthorization(options =>
         {
             options.AddPolicy("Admin", politica =>
@@ -42,6 +50,13 @@ public class Startup
         services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
         services.AddControllersWithViews();
+
+        services.AddPaging(options =>
+        {
+            options.ViewName = "Bootstrap4";
+            options.PageParameterName = "pageindex";
+        });
+
 
         services.AddMemoryCache();
         services.AddSession();

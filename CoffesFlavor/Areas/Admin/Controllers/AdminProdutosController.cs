@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CoffesFlavor.Context;
 using CoffesFlavor.Models;
 using Microsoft.AspNetCore.Authorization;
+using ReflectionIT.Mvc.Paging;
 
 namespace CoffesFlavor.Areas.Admin.Controllers
 {
@@ -23,11 +24,28 @@ namespace CoffesFlavor.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminProdutos
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    var appDbContext = _context.Produtos.Include(p => p.Categoria);
+        //    return View(await appDbContext.ToListAsync());
+        //}
+
+        public async Task<IActionResult> Index(string filter, int pageindex =1, string sort="Nome")
         {
-            var appDbContext = _context.Produtos.Include(p => p.Categoria);
-            return View(await appDbContext.ToListAsync());
+            var resultado = _context.Produtos.Include(p => p.Categoria).AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                resultado = resultado.Where(p => p.Nome.Contains(filter));
+            }
+
+            var model = await PagingList.CreateAsync(resultado, 5, pageindex, sort, "Nome");
+
+            model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+            return View(model);
         }
+
+
 
         // GET: Admin/AdminProdutos/Details/5
         public async Task<IActionResult> Details(int? id)

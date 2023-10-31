@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bkyEUI/MmmxjU3llL9cfszqKiYN7czaQNBYDFhGQi3c=",
+  "Hash": "+acz78glizoPjvnRhHziGtcBLkZdzq2IOjoSE9itqYc=",
   "Source": "CoffesFlavor",
   "BasePath": "_content/CoffesFlavor",
   "Mode": "Default",
@@ -289,6 +289,23 @@
       "OriginalItemSpec": "wwwroot\\images\\login_48.png"
     },
     {
+      "Identity": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Logo empresa sem fundo.png",
+      "SourceId": "CoffesFlavor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\",
+      "BasePath": "_content/CoffesFlavor",
+      "RelativePath": "images/Logo empresa sem fundo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logo empresa sem fundo.png"
+    },
+    {
       "Identity": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\negado1.jpg",
       "SourceId": "CoffesFlavor",
       "SourceType": "Discovered",
@@ -338,6 +355,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\phone-app-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\produtos\\Cupcake.jpg",
+      "SourceId": "CoffesFlavor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\",
+      "BasePath": "_content/CoffesFlavor",
+      "RelativePath": "images/produtos/Cupcake.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\produtos\\Cupcake.jpg"
     },
     {
       "Identity": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\registro1.jpg",
