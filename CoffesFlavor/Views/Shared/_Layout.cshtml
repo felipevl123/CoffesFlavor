@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CoffesFlavor.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body style="background-color:#F2E4DC">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3" style="background-color:#8C593B;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:#8C593B;">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/logo empresa sem fundo.png" width="200"  height="100"/>
+                    Home Coffee Express
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -22,22 +23,22 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     @await Component.InvokeAsync("CarrinhoCompraResumo")
                     @await Component.InvokeAsync("CategoriaMenu")
-                    <a class="nav-link text-light" asp-area="" 
+                    <a class="nav-link text-dark" asp-area="" 
                     asp-controller="Contato" asp-action="Index">Contato</a>
-                    <a class="nav-link text-light" asp-area="" 
+                    <a class="nav-link text-dark" asp-area="" 
                     asp-controller="Home" asp-action="Index">Home</a>
                     @*@<a class="nav-link text-light" asp-area="" asp-controller="Produto" asp-action="List">Produtos</a>*@
-                    <form class="navbar-form navbar-right" 
+                    @* <form class="navbar-form navbar-right" 
                     asp-controller="Produto" asp-action="Search" method="get">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Procurar produto"
                                    name="searchString" value="@ViewData["searchString"]" />
                         </div>
-                    </form>
+                    </form> *@
                     @await Html.PartialAsync("_LoginPartial")
                     @if (User.IsInRole("Admin"))
                     {
-                        <a class="nav-link text-light" 
+                        <a class="nav-link text-dark" 
                         asp-area="Admin" 
                         asp-controller="Admin" 
                         asp-action="Index">Admin</a>
