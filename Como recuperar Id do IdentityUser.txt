@@ -1,0 +1,13 @@
+Onde achei:
+
+https://stackoverflow.com/questions/30701006/how-to-get-the-current-logged-in-user-id-in-asp-net-core
+
+
+
+Linha que funcionou em classes que não são controller:
+Adicionar propriedade e injetar no construtor
+
+private readonly IHttpContextAccessor _httpContextAccessor;
+
+
+            var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);

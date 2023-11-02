@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qdOm6c8fbFltBIh7m8LczD/w+7OpP1j+8SkPVYEsVKH5OTChQbT5QkkREibVqi13sUSy4buAMceeh7WD0wJCGQ==",
+  "dgSpecHash": "rNCZzXLQ/JduPsh80dXbzUfFJ5OSMe6rKt3NVbtFguGgfEbKbeSB79Lbi5v9TFMOrVmpyNcwyx8syw36Hef87g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\CoffesFlavor\\CoffesFlavor\\CoffesFlavor.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\AppTesteCoffeeDev\\CoffesFlavor\\CoffesFlavor\\CoffesFlavor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

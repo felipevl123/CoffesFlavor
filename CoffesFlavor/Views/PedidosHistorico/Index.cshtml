@@ -1,0 +1,20 @@
+﻿@model PedidosListHistoricoViewModel
+
+<h3> Lista de pedidos</h3>
+
+@foreach (var pedido in Model.PedidosHistorico)
+{
+    
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <p>Pedido numero: @pedido.Pedido.PedidoId</p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <p>Nome: @pedido.Pedido.Nome</p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <p>Preco: @pedido.Pedido.PedidoTotal</p>
+        </div>
+    </div>
+    <br/>
+}

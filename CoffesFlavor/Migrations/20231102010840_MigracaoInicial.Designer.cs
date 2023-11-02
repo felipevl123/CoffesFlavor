@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffesFlavor.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231025150253_AdicionarIdentity")]
-    partial class AdicionarIdentity
+    [Migration("20231102010840_MigracaoInicial")]
+    partial class MigracaoInicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -167,6 +167,33 @@ namespace CoffesFlavor.Migrations
                     b.HasIndex("ProdutoId");
 
                     b.ToTable("PedidoDetalhes");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosHistorico", b =>
+                {
+                    b.Property<int>("PedidosHistoricoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PedidosHistoricoId"));
+
+                    b.Property<string>("AspNetUsersId")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("PedidoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PedidosHistoricoId");
+
+                    b.HasIndex("IdentityUserId");
+
+                    b.HasIndex("PedidoId");
+
+                    b.ToTable("PedidosHistoricos");
                 });
 
             modelBuilder.Entity("CoffesFlavor.Models.Produto", b =>
@@ -443,6 +470,23 @@ namespace CoffesFlavor.Migrations
                     b.Navigation("Pedido");
 
                     b.Navigation("Produto");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosHistorico", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
+
+                    b.HasOne("CoffesFlavor.Models.Pedido", "Pedido")
+                        .WithMany()
+                        .HasForeignKey("PedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IdentityUser");
+
+                    b.Navigation("Pedido");
                 });
 
             modelBuilder.Entity("CoffesFlavor.Models.Produto", b =>

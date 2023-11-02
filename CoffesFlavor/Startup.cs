@@ -33,6 +33,8 @@ public class Startup
         services.AddTransient<IProdutoRepository, ProdutoRepository>();
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();
+        services.AddTransient<IPedidosHistoricoRepository, PedidosHistoricoRepository>();
+        services.AddTransient<HttpServiceClaimPrincipalAccessor>();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
         services.AddScoped<RelatorioVendaService>();
