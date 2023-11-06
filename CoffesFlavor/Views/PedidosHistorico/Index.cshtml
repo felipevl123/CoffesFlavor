@@ -1,13 +1,17 @@
 ﻿@model PedidosListHistoricoViewModel
 
 <h3> Lista de pedidos</h3>
+<br />
 
-@foreach (var pedido in Model.PedidosHistorico)
+@* @foreach (var pedido in Model.PedidosHistorico)
 {
-    
+
     <div class="row">
         <div class="col-sm-4 col-md-4 col-lg-4">
-            <p>Pedido numero: @pedido.Pedido.PedidoId</p>
+            @* <p>Protocolo do Pedido: @pedido.Pedido.PedidoId</p>
+            <a asp-action="Details" asp-route-id="@pedido.Pedido.PedidoId">
+                Protocolo do Pedido: </a>
+            <p>@pedido.Pedido.PedidoId</p>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
             <p>Nome: @pedido.Pedido.Nome</p>
@@ -17,4 +21,10 @@
         </div>
     </div>
     <br/>
-}
+} *@
+
+
+<partial name="_MenuFiltroHistorico" />
+
+<partial name="_HistoricoPedAcompanhamento" />
+<partial name="_HistoricoPedFinalizado" />

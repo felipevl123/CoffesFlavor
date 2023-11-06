@@ -1,0 +1,20 @@
+﻿@model int
+
+@{
+    ViewData["Title"] = "404 Not Found";
+}
+
+<div class="alert-alert-danger mt-1 mb-1">
+    <h1>Erro 404 - Not Found</h1>
+    <hr />
+    <h2>
+        Pedido com o protocolo: @Model não foi encontrado
+    </h2>
+</div>
+
+<br/>
+<a asp-action="Index" asp-controller="PedidosHistorico" class="btn btn-outline-dark"
+   style="background-color:#D9BBA0">
+    <h2>Retornar para a lista de Pedidos</h2>
+</a>
+<br/>
