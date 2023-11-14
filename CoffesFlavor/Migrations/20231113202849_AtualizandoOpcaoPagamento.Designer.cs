@@ -4,6 +4,7 @@ using CoffesFlavor.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffesFlavor.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231113202849_AtualizandoOpcaoPagamento")]
+    partial class AtualizandoOpcaoPagamento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,44 +73,6 @@ namespace CoffesFlavor.Migrations
                     b.ToTable("Categorias");
                 });
 
-            modelBuilder.Entity("CoffesFlavor.Models.ContaDetalhe", b =>
-                {
-                    b.Property<int>("ContaDetalheId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContaDetalheId"));
-
-                    b.Property<string>("AspNetUsersId")
-                        .HasMaxLength(450)
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("DataDeNascimento")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EndereçoCompleto")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("Genero")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IdentityUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ContaDetalheId");
-
-                    b.HasIndex("IdentityUserId");
-
-                    b.ToTable("ContaDetalhes");
-                });
-
             modelBuilder.Entity("CoffesFlavor.Models.Pedido", b =>
                 {
                     b.Property<int>("PedidoId")
@@ -126,6 +91,7 @@ namespace CoffesFlavor.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -170,6 +136,7 @@ namespace CoffesFlavor.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Telefone")
+                        .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
@@ -512,15 +479,6 @@ namespace CoffesFlavor.Migrations
                         .HasForeignKey("ProdutoId");
 
                     b.Navigation("Produto");
-                });
-
-            modelBuilder.Entity("CoffesFlavor.Models.ContaDetalhe", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
-                        .WithMany()
-                        .HasForeignKey("IdentityUserId");
-
-                    b.Navigation("IdentityUser");
                 });
 
             modelBuilder.Entity("CoffesFlavor.Models.Pedido", b =>

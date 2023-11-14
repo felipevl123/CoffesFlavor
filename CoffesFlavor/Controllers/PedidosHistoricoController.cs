@@ -1,5 +1,4 @@
-﻿using CoffesFlavor.Areas.Admin.Servicos;
-using CoffesFlavor.Context;
+﻿using CoffesFlavor.Context;
 using CoffesFlavor.Models;
 using CoffesFlavor.Repositories.Interfaces;
 using CoffesFlavor.ViewModels;

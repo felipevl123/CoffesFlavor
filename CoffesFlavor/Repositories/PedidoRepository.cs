@@ -23,8 +23,15 @@ namespace CoffesFlavor.Repositories
 
         public void CriaPedido(Pedido pedido)
         {
+            pedido.StatusPedidoId = 1;
             var userId = _principalAccessor.GetClaim();
+
             pedido.PedidoEnviado = DateTime.Now;
+            pedido.Email = _context.Users
+                .Where(u => u.Id == userId).First().Email;
+            pedido.Telefone = _context.Users
+                .Where(u => u.Id == userId).First().PhoneNumber;
+
             _context.PedidosHistoricos
                 .Add(new PedidosHistorico
                 {
@@ -33,7 +40,6 @@ namespace CoffesFlavor.Repositories
                 });
             _context.Pedidos.Add(pedido);
             _context.SaveChanges();
-            // Implementar Adicionar a PedidosHistorico o pedido criado
 
             var carrinhoCompraItens = _carrinhoCompra.CarrinhoCompraItens;
 

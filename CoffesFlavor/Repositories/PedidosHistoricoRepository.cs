@@ -14,7 +14,9 @@ namespace CoffesFlavor.Repositories
         private readonly AppDbContext _context;
         private readonly HttpServiceClaimPrincipalAccessor _principalAccessor;
         public IEnumerable<PedidosHistorico> PedidosHistorico =>
-            _context.PedidosHistoricos.Include(p => p.Pedido);
+            _context.PedidosHistoricos
+            .Include(p => p.Pedido)
+            .ThenInclude(p => p.StatusPedido);
 
 
         public PedidosHistoricoRepository(AppDbContext context,

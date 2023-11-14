@@ -1,4 +1,7 @@
-﻿using CoffesFlavor.ViewModels;
+﻿using CoffesFlavor.Context;
+using CoffesFlavor.Models;
+using CoffesFlavor.Services;
+using CoffesFlavor.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,12 +11,15 @@ namespace CoffesFlavor.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly AppDbContext _context;
 
-        public AccountController(UserManager<IdentityUser> userManager, 
-            SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager,
+            AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _context = context;
         }
 
         [HttpGet]
@@ -59,16 +65,27 @@ namespace CoffesFlavor.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(LoginViewModel registroVM)
+        public async Task<IActionResult> Register(RegisterViewModel registroVM)
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = registroVM.UserName };
+                var user = new IdentityUser 
+                { UserName = registroVM.UserName,
+                Email = registroVM.Email,
+                PhoneNumber = registroVM.PhoneNumber};
+
                 var result = await _userManager.CreateAsync(user, registroVM.Password);
 
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Member");
+                    _context.ContaDetalhes.Add
+                        (new ContaDetalhe 
+                        { AspNetUsersId = user.Id,
+                        DataDeNascimento = registroVM.DataDeNascimento,
+                        UserName = user.UserName,
+                        Email = user.Email});
+                    _context.SaveChanges();
                     return RedirectToAction("Login", "Account");
                 }
                 else

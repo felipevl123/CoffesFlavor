@@ -5,47 +5,106 @@
     decimal totalPedido = 0;
 }
 
-<h1>Produtos do pedido</h1>
+<h1 class="text-center">Produtos do pedido</h1>
 <hr />
-
-<h3>Pedido : @Html.DisplayFor(model => @Model.Pedido.PedidoId) </h3>
-<h3>Cliente : @Html.DisplayFor(model => @Model.Pedido.Nome)</h3>
-<h3>Data : @Html.DisplayFor(model => @Model.Pedido.PedidoEnviado)</h3>
-<h3>Entrega : @Html.DisplayFor(model => @Model.Pedido.PedidoEntregueEm)</h3>
+<div class="text-center">
+    <h2>N° Pedido : @Html.DisplayFor(model => @Model.Pedido.PedidoId) </h2>
+    <h4>Data : @Html.DisplayFor(model => @Model.Pedido.PedidoEnviado)</h4> 
+    @*avaliar colocar data abaixo*@
+    @if (Model.Pedido.PedidoEntregueEm.HasValue)
+    {
+        <h4>Entrega : @Html.DisplayFor(model => @Model.Pedido.PedidoEntregueEm)</h4>
+    }
+    <h2 style="background-color: #D9BBA0">Status do pedido: 
+        @Html.DisplayFor(model => @Model.Pedido.StatusPedido.Status)</h2>
+</div>
+<br />
 
 <table class="table">
-    @foreach(var item in Model.Pedido.PedidoItens)
+    @foreach (var item in Model.Pedido.PedidoItens)
     {
         totalPedido += (@item.Produto.Preco * @item.Quantidade);
         //totalPedido = @item.Pedido.PedidoTotal;
 
         <tr>
-            <td align="right">
-                <h3>@Html.DisplayFor(modelItem => item.Produto.Nome)</h3>
-            </td>
-            <td align="right">
+            <td align="left">
                 <img src="@item.Produto.ImagemUrl" class="img-fluid" height="100" width="100">
             </td>
-            <td align="right">
-                <h3>@string.Format("{0:C}",item.Produto.Preco)</h3>
+            <td align="left">
+                <h4>@Html.DisplayFor(modelItem => item.Produto.Nome)</h4>
             </td>
             <td align="right">
-                <h3>(@Html.DisplayFor(modelItem => item.Quantidade))</h3>
+                <h4>Quantidade: @Html.DisplayFor(modelItem => item.Quantidade)</h4>
+            </td>
+            <td align="right">
+                <h4>Valor: @string.Format("{0:C}",item.Produto.Preco)</h4>
             </td>
         </tr>
     }
-    <tr>
-        <td colspan="2">&nbsp;</td>
+    @* <tr>
+        <td align="left">
+            <h5>Endereço: @Model.Pedido.Endereco1, @Model.Pedido.Cidade, @Model.Pedido.Estado</h5>
+        </td>
+        <td align="left">
+            <h5>Tipo de pagamento: Inserir metodo de pagamento</h5>
+        </td>
+        @* <td colspan="2">&nbsp;</td> 
         <td align="right">
-            <h3>Total do Pedido : @string.Format("{0:C}", @totalPedido)</h3>
+            <h5>Total do Pedido </h5>
+        </td>
+        <td align="right">
+            <h5>@string.Format("{0:C}", @totalPedido)</h5>
+        </td>
+    </tr> *@
+</table>
+<br />
+<table class="table">
+    <tr>
+        <td align="left">
+            <h5>Endereço: @Model.Pedido.Endereco1, @Model.Pedido.Cidade, @Model.Pedido.Estado</h5>
+        </td>
+        <td align="left">
+            <h5>Tipo de pagamento: @Html.DisplayFor(model => @Model.Pedido.OpcaoPagamento)</h5>
+        </td>
+         <td colspan="2">&nbsp;</td> 
+        <td align="right">
+            <h5>Total do Pedido </h5>
+        </td>
+        <td align="right">
+            <h5>@string.Format("{0:C}", @totalPedido)</h5>
         </td>
     </tr>
 </table>
 
-<a asp-action="Index" class="btn btn-outline-dark"
-   style="background-color:#D9BBA0">
-    <h3>Retornar para a lista de Pedidos</h3>
-</a>
-
+@if (@Model.Pedido.PedidoEntregueEm.HasValue)
+{
+    <table class="table">
+        <tr>
+            <td align="left">
+                <a asp-action="Index" class="btn btn-outline-dark"
+                   style="background-color:#D9BBA0">
+                    <h3>Retornar para a lista de Pedidos</h3>
+                </a>
+            </td>
+            <td align="left">
+                <a asp-action="Index" asp-controller="FeedbackController" class="btn btn-outline-dark">
+                    <h3>Avaliar Entrega</h3>
+                </a>
+            </td>
+            <td align="right">
+                <a asp-action="Index" asp-controller="SuporteController" class="btn btn-outline-dark">
+                    <h3>Preciso de ajuda</h3>
+                </a>
+            </td>
+        </tr>
+    </table>
+}
+else
+{
+    <a asp-action="Index" class="btn btn-outline-dark"
+       style="background-color:#D9BBA0">
+        <h3>Retornar para a lista de Pedidos</h3>
+    </a>
+}
 
 

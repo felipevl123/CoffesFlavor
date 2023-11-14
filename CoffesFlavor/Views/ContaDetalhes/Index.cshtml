@@ -1,0 +1,13 @@
+﻿@model ContaDetalheViewModel
+
+
+<h1 class="text-center">Minha conta</h1>
+<hr />
+<div class="text-center">
+    <h2>Usuário : @Html.DisplayFor(model => @Model.Conta.UserName) </h2>
+    <h4>Genero : @Html.DisplayFor(model => @Model.Conta.Genero)</h4>
+    <h4>Email : @Html.DisplayFor(model => @Model.Conta.Email)</h4>
+    <h4>Endereço : @Html.DisplayFor(model => @Model.Conta.EndereçoCompleto)</h4>
+    <h4>Data de nascimento : @Html.DisplayFor(model => @Model.Conta.DataDeNascimento)</h4>
+</div>
+<br />

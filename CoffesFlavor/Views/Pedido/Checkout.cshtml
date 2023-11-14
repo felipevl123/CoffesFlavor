@@ -4,10 +4,10 @@
 <hr />
 
 <form asp-action="Checkout" method="post" class="form-horizontal" role="form">
-    
+
     <div class="row">
         <div class="form-group col-md-6">
-            <label asp-for="Nome" class="control-label"></label>
+            <label asp-for="Nome" class="control-label">Quem vai receber?</label>
             <input asp-for="Nome" class="form-control" />
             <span asp-validation-for="Nome" class="text-danger"></span>
         </div>
@@ -46,16 +46,19 @@
             <span asp-validation-for="Estado" class="text-danger"></span>
         </div>
     </div>
+
+    <br />
     <div class="row">
-        <div class="form-group col-md-6">
-            <label asp-for="Telefone" class="control-label"></label>
-            <input asp-for="Telefone" class="form-control" />
-            <span asp-validation-for="Telefone" class="text-danger"></span>
-        </div>
-        <div class="form-group col-md-6">
-            <label asp-for="Email" class="control-label"></label>
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger"></span>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Metodo de pagamento</label>
+            </div>
+            <select asp-for="OpcaoPagamento" class="custom-select" id="inputGroupSelect01">
+                <option value="Crédito" selected>Crédito</option>
+                <option value="Débito">Débito</option>
+                <option value="Dinheiro">Dinheiro</option>
+            </select>
+            <span asp-validation-for="OpcaoPagamento" class="text-danger"></span>
         </div>
     </div>
     <br />
@@ -66,8 +69,8 @@
         </div>
         &nbsp;
         <div class="form-group col-md-3">
-            <a class="btn btn-outline-info" asp-controller="CarrinhoCompra" 
-            asp-action="Index">Retornar ao Carrinho</a>
+            <a class="btn btn-outline-info" asp-controller="CarrinhoCompra"
+               asp-action="Index">Retornar ao Carrinho</a>
         </div>
     </div>
 </form>
