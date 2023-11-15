@@ -87,12 +87,14 @@
                 </a>
             </td>
             <td align="left">
-                <a asp-action="Index" asp-controller="FeedbackController" class="btn btn-outline-dark">
+                <a asp-action="Index" asp-controller="Feedback"
+                   asp-route-pedido="@Model.Pedido"
+                class="btn btn-outline-dark">
                     <h3>Avaliar Entrega</h3>
                 </a>
             </td>
             <td align="right">
-                <a asp-action="Index" asp-controller="SuporteController" class="btn btn-outline-dark">
+                <a asp-action="Index" asp-controller="Suporte" class="btn btn-outline-dark">
                     <h3>Preciso de ajuda</h3>
                 </a>
             </td>

@@ -751,7 +751,6 @@ C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\Coff
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Drawing.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Drawing.Primitives.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Dynamic.Runtime.dll
-C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Formats.Asn1.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Globalization.Calendars.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Globalization.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Globalization.Extensions.dll
@@ -840,7 +839,6 @@ C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\Coff
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Security.SecureString.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.ServiceModel.Web.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.ServiceProcess.dll
-C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Text.Encoding.CodePages.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Text.Encoding.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Text.Encoding.Extensions.dll
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\refs\System.Text.RegularExpressions.dll
@@ -1172,3 +1170,13 @@ C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\Coff
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\obj\Debug\net6.0\CoffesFlavor.pdb
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\obj\Debug\net6.0\CoffesFlavor.genruntimeconfig.cache
 C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\obj\Debug\net6.0\ref\CoffesFlavor.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\MailKit.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\System.Formats.Asn1.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\SendGrid.dll
+C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\bin\Debug\net6.0\StarkbankEcdsa.dll
