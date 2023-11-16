@@ -13,7 +13,7 @@ namespace CoffesFlavor.Repositories
         private readonly HttpServiceClaimPrincipalAccessor _principalAccessor;
 
 
-        public PedidoRepository(AppDbContext context, CarrinhoCompra carrinhoCompra, 
+        public PedidoRepository(AppDbContext context, CarrinhoCompra carrinhoCompra,
             HttpServiceClaimPrincipalAccessor principalAccessor)
         {
             _context = context;
@@ -32,13 +32,13 @@ namespace CoffesFlavor.Repositories
             pedido.Telefone = _context.Users
                 .Where(u => u.Id == userId).First().PhoneNumber;
 
+            _context.Pedidos.Add(pedido);
             _context.PedidosHistoricos
                 .Add(new PedidosHistorico
                 {
                     Pedido = pedido,
                     AspNetUsersId = userId
                 });
-            _context.Pedidos.Add(pedido);
             _context.SaveChanges();
 
             var carrinhoCompraItens = _carrinhoCompra.CarrinhoCompraItens;
@@ -56,7 +56,8 @@ namespace CoffesFlavor.Repositories
             }
 
             _context.SaveChanges();
-            
+
         }
+
     }
 }

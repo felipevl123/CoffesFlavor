@@ -108,6 +108,29 @@ namespace CoffesFlavor.Migrations
                     b.ToTable("ContaDetalhes");
                 });
 
+            modelBuilder.Entity("CoffesFlavor.Models.CupomDesconto", b =>
+                {
+                    b.Property<int>("CupomDescontoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CupomDescontoId"));
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Cupom")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<decimal>("Desconto")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("CupomDescontoId");
+
+                    b.ToTable("CupomDesconto");
+                });
+
             modelBuilder.Entity("CoffesFlavor.Models.Pedido", b =>
                 {
                     b.Property<int>("PedidoId")
@@ -210,6 +233,29 @@ namespace CoffesFlavor.Migrations
                     b.HasIndex("ProdutoId");
 
                     b.ToTable("PedidoDetalhes");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosComDesconto", b =>
+                {
+                    b.Property<int>("PedidosComDescontoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PedidosComDescontoId"));
+
+                    b.Property<int>("CupomDescontoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PedidoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PedidosComDescontoId");
+
+                    b.HasIndex("CupomDescontoId");
+
+                    b.HasIndex("PedidoId");
+
+                    b.ToTable("PedidosComDesconto");
                 });
 
             modelBuilder.Entity("CoffesFlavor.Models.PedidosHistorico", b =>
@@ -551,6 +597,25 @@ namespace CoffesFlavor.Migrations
                     b.Navigation("Pedido");
 
                     b.Navigation("Produto");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosComDesconto", b =>
+                {
+                    b.HasOne("CoffesFlavor.Models.CupomDesconto", "CupomDesconto")
+                        .WithMany()
+                        .HasForeignKey("CupomDescontoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoffesFlavor.Models.Pedido", "Pedido")
+                        .WithMany()
+                        .HasForeignKey("PedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CupomDesconto");
+
+                    b.Navigation("Pedido");
                 });
 
             modelBuilder.Entity("CoffesFlavor.Models.PedidosHistorico", b =>

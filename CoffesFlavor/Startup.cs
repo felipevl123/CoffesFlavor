@@ -40,6 +40,7 @@ public class Startup
         services.AddTransient<IPedidoRepository, PedidoRepository>();
         services.AddTransient<IPedidosHistoricoRepository, PedidosHistoricoRepository>();
         services.AddTransient<IContaDetalhesRepository, ContaDetalheRepository>();
+        services.AddTransient<ICupomDescontoRepository, CupomDescontoRepository>();
         services.AddTransient<HttpServiceClaimPrincipalAccessor>();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
         //services.AddSingleton<IEmailService, GmailService>();

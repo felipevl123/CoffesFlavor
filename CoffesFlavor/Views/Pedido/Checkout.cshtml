@@ -1,4 +1,4 @@
-﻿@model Pedido
+﻿@model PedidoCompletoViewModel
 
 <h3>Você esta a um passo de completar o seu pedido</h3>
 <hr />
@@ -7,43 +7,48 @@
 
     <div class="row">
         <div class="form-group col-md-6">
-            <label asp-for="Nome" class="control-label">Quem vai receber?</label>
-            <input asp-for="Nome" class="form-control" />
-            <span asp-validation-for="Nome" class="text-danger"></span>
+            <label asp-for="Pedido.Nome" class="control-label">Quem vai receber?</label>
+            <input asp-for="Pedido.Nome" class="form-control" />
+            <span asp-validation-for="Pedido.Nome" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
-            <label asp-for="Sobrenome" class="control-label"></label>
-            <input asp-for="Sobrenome" class="form-control" />
-            <span asp-validation-for="Sobrenome" class="text-danger"></span>
+            <label asp-for="Pedido.Sobrenome" class="control-label"></label>
+            <input asp-for="Pedido.Sobrenome" class="form-control" />
+            <span asp-validation-for="Pedido.Sobrenome" class="text-danger"></span>
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
-            <label asp-for="Endereco1" class="control-label"></label>
-            <input asp-for="Endereco1" class="form-control" />
-            <span asp-validation-for="Endereco1" class="text-danger"></span>
+            <label asp-for="Pedido.Endereco1" class="control-label"></label>
+            <input asp-for="Pedido.Endereco1" class="form-control" />
+            <span asp-validation-for="Pedido.Endereco1" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
-            <label asp-for="Endereco2" class="control-label"></label>
-            <input asp-for="Endereco2" class="form-control" />
-            <span asp-validation-for="Endereco2" class="text-danger"></span>
+            <label asp-for="Pedido.Endereco2" class="control-label"></label>
+            <input asp-for="Pedido.Endereco2" class="form-control" />
+            <span asp-validation-for="Pedido.Endereco2" class="text-danger"></span>
         </div>
     </div>
     <div class="row">
-        <div class="form-group col-md-4">
-            <label asp-for="Cep" class="control-label"></label>
-            <input asp-for="Cep" class="form-control" />
-            <span asp-validation-for="Cep" class="text-danger"></span>
+        <div class="form-group col-md-3">
+            <label asp-for="Pedido.Cep" class="control-label"></label>
+            <input asp-for="Pedido.Cep" class="form-control" />
+            <span asp-validation-for="Pedido.Cep" class="text-danger"></span>
         </div>
-        <div class="form-group col-md-4">
-            <label asp-for="Cidade" class="control-label"></label>
-            <input asp-for="Cidade" class="form-control" value="São Paulo" />
-            <span asp-validation-for="Cidade" class="text-danger"></span>
+        <div class="form-group col-md-3">
+            <label asp-for="Pedido.Cidade" class="control-label"></label>
+            <input asp-for="Pedido.Cidade" class="form-control" value="São Paulo" />
+            <span asp-validation-for="Pedido.Cidade" class="text-danger"></span>
         </div>
-        <div class="form-group col-md-4">
-            <label asp-for="Estado" class="control-label"></label>
-            <input asp-for="Estado" class="form-control" value="São Paulo" />
-            <span asp-validation-for="Estado" class="text-danger"></span>
+        <div class="form-group col-md-3">
+            <label asp-for="Pedido.Estado" class="control-label"></label>
+            <input asp-for="Pedido.Estado" class="form-control" value="São Paulo" />
+            <span asp-validation-for="Pedido.Estado" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="Cupom" class="control-label">Cupom de desconto</label>
+            <input asp-for="Cupom" class="form-control" value="" />
+            <span asp-validation-for="Cupom" class="text-danger"></span>
         </div>
     </div>
 
@@ -53,12 +58,12 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect01">Metodo de pagamento</label>
             </div>
-            <select asp-for="OpcaoPagamento" class="custom-select" id="inputGroupSelect01">
+            <select asp-for="Pedido.OpcaoPagamento" class="custom-select" id="inputGroupSelect01">
                 <option value="Crédito" selected>Crédito</option>
                 <option value="Débito">Débito</option>
                 <option value="Dinheiro">Dinheiro</option>
             </select>
-            <span asp-validation-for="OpcaoPagamento" class="text-danger"></span>
+            <span asp-validation-for="Pedido.OpcaoPagamento" class="text-danger"></span>
         </div>
     </div>
     <br />

@@ -13,7 +13,7 @@
             <p>Metodo de pagamento : <strong>@Model.OpcaoPagamento</strong></p>
 
 
-            <table class="table">
+            <table class="table table-bordered table-striped">
                 <tr>
                     <th></th>
                     <th>Quantidade</th>
@@ -30,6 +30,16 @@
                     </tr>
                 }
             </table>
+
+            <br/>
+            @if(ViewBag.ValorDescontado != null)
+            {
+                <h4>
+                    Valor do desconto: 
+                    <strong>@(((decimal)ViewBag.ValorDescontado).ToString("C2"))</strong>
+                </h4>
+            }
+            
 
             <h4>Valor total do Pedido: 
                 <strong>@(((decimal)ViewBag.TotalPedido).ToString("C2"))</strong></h4>

@@ -20,6 +20,8 @@ namespace CoffesFlavor.Context
         public DbSet<PedidosHistorico> PedidosHistoricos { get; set; }
         public DbSet<StatusPedido> StatusPedido { get; set; }
         public DbSet<ContaDetalhe> ContaDetalhes { get; set; }
+        public DbSet<CupomDesconto> CupomDesconto { get; set; }
+        public DbSet<PedidosComDesconto> PedidosComDesconto { get; set; }
 
     }
 }
