@@ -87,8 +87,8 @@
                 </a>
             </td>
             <td align="left">
-                <a asp-action="Index" asp-controller="Feedback"
-                   asp-route-pedido="@Model.Pedido"
+                <a asp-action="AvaliarEntrega" asp-controller="PedidosHistorico" 
+                   asp-route-id="@Model.Pedido.PedidoId"
                 class="btn btn-outline-dark">
                     <h3>Avaliar Entrega</h3>
                 </a>

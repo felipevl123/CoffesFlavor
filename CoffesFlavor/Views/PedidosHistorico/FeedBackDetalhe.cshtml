@@ -1,0 +1,19 @@
+﻿@model PedidoAvaliadoViewModel
+
+<h1 class="text-center">Avaliação do Pedido N° @Model.NumeroDoPedido</h1>
+<hr />
+<div class="text-center">
+    <h3>Data de entrega do pedido : @Html.DisplayFor(model => @Model.DataDeEntrega)</h3>
+    <br/>
+    <h4>Nome : @Html.DisplayFor(model => @Model.NomeDoUsuario) </h4>
+    <br/>
+    <br/>
+    <h5>Avaliação do usuário : @Html.DisplayFor(model => @Model.FeedBack)</h5>
+</div>
+<br />
+<br />
+
+<a asp-action="Index" class="btn btn-outline-dark"
+   style="background-color:#D9BBA0">
+    <h3>Retornar para a lista de Pedidos</h3>
+</a>

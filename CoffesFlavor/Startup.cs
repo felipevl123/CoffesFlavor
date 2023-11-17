@@ -41,6 +41,8 @@ public class Startup
         services.AddTransient<IPedidosHistoricoRepository, PedidosHistoricoRepository>();
         services.AddTransient<IContaDetalhesRepository, ContaDetalheRepository>();
         services.AddTransient<ICupomDescontoRepository, CupomDescontoRepository>();
+        services.AddTransient<IAvaliacaoPedidosRepository, AvaliacaoPedidosRepository>();
+        services.AddTransient<IProdutoFavoritoRepository, ProdutoFavoritoRepository>();
         services.AddTransient<HttpServiceClaimPrincipalAccessor>();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
         //services.AddSingleton<IEmailService, GmailService>();
@@ -58,6 +60,7 @@ public class Startup
         });
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddSingleton<UserSessionService>();
         services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
         services.AddControllersWithViews();

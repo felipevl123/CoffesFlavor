@@ -1,6 +1,7 @@
 ﻿using CoffesFlavor.Context;
 using CoffesFlavor.Models;
 using CoffesFlavor.Repositories.Interfaces;
+using CoffesFlavor.Services;
 using CoffesFlavor.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,10 +13,17 @@ namespace CoffesFlavor.Controllers
     public class PedidosHistoricoController : Controller
     {
         private readonly IPedidosHistoricoRepository _pedidosHistoricoRepository;
+        private readonly IAvaliacaoPedidosRepository _avaPedidosRepository;
+        private readonly UserSessionService _userSessionService;
 
-        public PedidosHistoricoController(IPedidosHistoricoRepository pedidosHistoricoRepository)
+
+        public PedidosHistoricoController(IPedidosHistoricoRepository pedidosHistoricoRepository,
+            IAvaliacaoPedidosRepository avaPedidosRepository,
+            UserSessionService userSessionService)
         {
             _pedidosHistoricoRepository = pedidosHistoricoRepository;
+            _avaPedidosRepository = avaPedidosRepository;
+            _userSessionService = userSessionService;
         }
 
         public IActionResult Index()
@@ -118,5 +126,72 @@ namespace CoffesFlavor.Controllers
 
             return View("Index", pedidoHistViewModel);
         }
+
+        [HttpGet]
+        public IActionResult AvaliarEntrega(int id)
+        {
+            var pedido = _pedidosHistoricoRepository.GetDetalhePedido(id);
+
+            if (_avaPedidosRepository.VerificaFeedBack(pedido))
+            {
+                return RedirectToAction(nameof(FeedBackDetalhe), pedido);
+            }
+
+            var avaliacaoPdVW = new AvaliacaoPedidoViewModel
+            { 
+                Pedido = pedido
+              
+            };
+
+            //TempData["PedidoId"] = pedido.PedidoId;
+
+            _userSessionService.SetData("PedidoId", pedido.PedidoId);
+
+            return View(avaliacaoPdVW);
+
+        }
+
+        [HttpPost]
+        public IActionResult AvaliarEntrega(AvaliacaoPedidoViewModel av)
+        {
+            //int pedidoId = (int)(TempData["PedidoId"]);
+            var pedidoId = _userSessionService.GetData<int>("PedidoId");
+
+            var pedido = _pedidosHistoricoRepository.GetDetalhePedido(pedidoId);
+
+            av.Pedido = pedido;
+
+            if (String.IsNullOrEmpty(av.FeedBack))
+            {
+                ModelState
+                    .AddModelError("", "Preencha o campo de avaliação");
+            }
+
+            if (ModelState.IsValid)
+            {
+                _avaPedidosRepository.AvaliaPedido(av);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(av);
+
+        }
+
+        public IActionResult FeedBackDetalhe(Pedido pedido)
+        {
+            var pedidoAvaliado = _avaPedidosRepository.BuscaAvaliacao(pedido);
+
+            var avaliacao = new PedidoAvaliadoViewModel
+            {
+                NomeDoUsuario = pedidoAvaliado.Pedido.Nome,
+                NumeroDoPedido = pedidoAvaliado.PedidoId,
+                DataDeEntrega = (DateTime)pedidoAvaliado.Pedido.PedidoEntregueEm,
+                FeedBack = pedidoAvaliado.FeedBackCliente
+            };
+
+            return View(avaliacao);
+        }
+
+
     }
 }

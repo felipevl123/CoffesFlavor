@@ -49,6 +49,7 @@
                     @await Component.InvokeAsync("CarrinhoCompraResumo")
                     @await Component.InvokeAsync("CategoriaMenu")
                     <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse justify-content-center">
+                    @await Html.PartialAsync("_FavoritosPartial")
                     @await Html.PartialAsync("_HistoricoPartial")
                     <a class="nav-link text-dark" asp-area=""
                        asp-controller="Home" asp-action="Index">Home</a>

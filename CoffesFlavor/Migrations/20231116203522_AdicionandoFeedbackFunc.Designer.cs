@@ -4,6 +4,7 @@ using CoffesFlavor.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoffesFlavor.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231116203522_AdicionandoFeedbackFunc")]
+    partial class AdicionandoFeedbackFunc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -357,29 +360,6 @@ namespace CoffesFlavor.Migrations
                     b.ToTable("Produtos");
                 });
 
-            modelBuilder.Entity("CoffesFlavor.Models.ProdutoFavorito", b =>
-                {
-                    b.Property<int>("ProdutoFavoritoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProdutoFavoritoId"));
-
-                    b.Property<string>("IdentityUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProdutoFavoritoId");
-
-                    b.HasIndex("IdentityUserId");
-
-                    b.HasIndex("ProdutoId");
-
-                    b.ToTable("ProdutosFavoritos");
-                });
-
             modelBuilder.Entity("CoffesFlavor.Models.StatusPedido", b =>
                 {
                     b.Property<int>("StatusPedidoId")
@@ -700,23 +680,6 @@ namespace CoffesFlavor.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
-                });
-
-            modelBuilder.Entity("CoffesFlavor.Models.ProdutoFavorito", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
-                        .WithMany()
-                        .HasForeignKey("IdentityUserId");
-
-                    b.HasOne("CoffesFlavor.Models.Produto", "Produto")
-                        .WithMany()
-                        .HasForeignKey("ProdutoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("IdentityUser");
-
-                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
