@@ -9,6 +9,18 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\AppTesteCoffeeDev\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Carousel1.jpg",
+      "PackagePath": "staticwebassets\\images\\Carousel1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\AppTesteCoffeeDev\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Carousel2.jpg",
+      "PackagePath": "staticwebassets\\images\\Carousel2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\AppTesteCoffeeDev\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Carousel3.jpg",
+      "PackagePath": "staticwebassets\\images\\Carousel3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Felipe\\OneDrive\\Documentos\\Projetos\\AppTesteCoffeeDev\\CoffesFlavor\\CoffesFlavor\\wwwroot\\images\\Coxinha.jpg",
       "PackagePath": "staticwebassets\\images\\Coxinha.jpg"
     },
