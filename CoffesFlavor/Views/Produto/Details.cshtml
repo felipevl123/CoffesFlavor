@@ -30,11 +30,18 @@
                     Adicionar @Model.Nome ao carrinho
                     </a>
 
-                    <a class="btn btn-outline-dark"
+                    <a class="btn btn-outline-dark" style="background-color:#D9BF50"
                        asp-controller="Favorito"
                        asp-action="AdicionarItemAosFavoritos"
                        asp-route-produtoId="@Model.ProdutoId">
-                        Adicionar @Model.Nome aos favoritos
+                        Adicionar @Model.Nome aos favoritos &#10024
+                    </a>
+
+                    <a class="btn btn-outline-light" style="background-color:#700000"
+                       asp-controller="Favorito"
+                       asp-action="RemoverItemDosFavoritos"
+                       asp-route-produtoId="@Model.ProdutoId">
+                        Remover @Model.Nome dos favoritos &#10060
                     </a>
                 </p>
             </div>

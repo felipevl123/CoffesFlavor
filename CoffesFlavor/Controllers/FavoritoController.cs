@@ -3,6 +3,7 @@ using CoffesFlavor.Models;
 using CoffesFlavor.Repositories.Interfaces;
 using CoffesFlavor.Services;
 using CoffesFlavor.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -53,7 +54,41 @@ namespace CoffesFlavor.Controllers
             return View(produtoListViewModel);
         }
 
+        [Authorize]
         public IActionResult AdicionarItemAosFavoritos(int produtoId)
+        {
+            var idUser = _principalAccessor.GetClaim();
+            var usuario = _userManager.Users.Where(u => u.Id == idUser).FirstOrDefault();
+
+
+            var produto = new ProdutoFavorito
+            {
+                ProdutoId = produtoId,
+                IdentityUser = usuario
+            };
+
+            var resultProduto = _produtosFav.Any(p => p.ProdutoId == produtoId);
+            var resultUser = _produtosFav.Any(p => p.IdentityUser.Id == usuario.Id);
+
+            //var result = _produtosFav.FirstOrDefault().ProdutoId == produtoId
+            //    && _produtosFav.FirstOrDefault().IdentityUser.Id == usuario.Id;
+
+            if (resultProduto && resultUser)
+            {
+                TempData["Alerta"] = "Seu Produto já esta adicionado aos favoritos";
+                return RedirectToAction("Index", "Favorito");
+            }
+
+            _context.ProdutosFavoritos.Add(produto);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Favorito");
+
+
+        }
+
+        [Authorize]
+        public IActionResult RemoverItemDosFavoritos(int produtoId)
         {
             var idUser = _principalAccessor.GetClaim();
             var usuario = _userManager.Users.Where(u => u.Id == idUser).FirstOrDefault();
@@ -77,18 +112,16 @@ namespace CoffesFlavor.Controllers
                     .Where(p => p.Produto.ProdutoId == produtoId
                     && p.IdentityUser.Id == usuario.Id).ToList();
 
-                foreach(var item in f)
+                foreach (var item in f)
                 {
                     _context.ProdutosFavoritos.Remove(item);
                 }
                 _context.SaveChanges();
-                return RedirectToAction("List", "Produto");
+                TempData["Alerta"] = "Seu produto foi removido dos favoritos";
+                return RedirectToAction("Index", "Favorito");
             }
 
-            _context.ProdutosFavoritos.Add(produto);
-            _context.SaveChanges();
-
-            return RedirectToAction("List", "Produto");
+            return RedirectToAction("Index", "Favorito");
 
 
         }

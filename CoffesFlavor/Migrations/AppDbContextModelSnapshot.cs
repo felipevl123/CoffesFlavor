@@ -34,6 +34,11 @@ namespace CoffesFlavor.Migrations
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Nota")
+                        .IsRequired()
+                        .HasMaxLength(1)
+                        .HasColumnType("nvarchar(1)");
+
                     b.Property<int>("PedidoId")
                         .HasColumnType("int");
 
@@ -191,6 +196,10 @@ namespace CoffesFlavor.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ObservacaoPedido")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("OpcaoPagamento")
                         .IsRequired()

@@ -9,5 +9,7 @@ namespace CoffesFlavor.ViewModels
         [Display(Name = "Avaliação")]
         [StringLength(450)]
         public string FeedBack { get; set; }
+        [Required(ErrorMessage="Necessario avaliar o pedido")]
+        public string Nota { get; set; }
     }
 }

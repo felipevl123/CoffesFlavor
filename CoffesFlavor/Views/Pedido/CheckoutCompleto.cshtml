@@ -11,7 +11,9 @@
             <p>Data do Pedido : <strong>@Model.PedidoEnviado</strong></p>
             <p>Numero do Pedido : <strong>@Model.PedidoId</strong></p>
             <p>Metodo de pagamento : <strong>@Model.OpcaoPagamento</strong></p>
-
+            @if(!String.IsNullOrEmpty(Model.ObservacaoPedido)){
+                <p>Observações do pedido: @Model.ObservacaoPedido</p>
+            }
 
             <table class="table table-bordered table-striped">
                 <tr>

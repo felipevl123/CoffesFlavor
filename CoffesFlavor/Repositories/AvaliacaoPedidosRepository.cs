@@ -20,7 +20,8 @@ namespace CoffesFlavor.Repositories
             var avaliacaoPedido = new AvaliacaoPedido
             {
                 PedidoId = avaliacaoPdVM.Pedido.PedidoId,
-                FeedBackCliente = avaliacaoPdVM.FeedBack
+                FeedBackCliente = avaliacaoPdVM.FeedBack,
+                Nota = avaliacaoPdVM.Nota
             };
 
             _context.AvaliacaoPedidos.Add(avaliacaoPedido);

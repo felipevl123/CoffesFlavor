@@ -24,7 +24,7 @@
             <span asp-validation-for="Pedido.Endereco1" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
-            <label asp-for="Pedido.Endereco2" class="control-label"></label>
+            <label asp-for="Pedido.Endereco2" class="control-label">N°/Complemento</label>
             <input asp-for="Pedido.Endereco2" class="form-control" />
             <span asp-validation-for="Pedido.Endereco2" class="text-danger"></span>
         </div>
@@ -49,6 +49,16 @@
             <label asp-for="Cupom" class="control-label">Cupom de desconto</label>
             <input asp-for="Cupom" class="form-control" value="" />
             <span asp-validation-for="Cupom" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div >
+            <div class="form-group col-md-3">
+                <label asp-for="Pedido.ObservacaoPedido" class="control-label">Observações do pedido</label>
+                <textarea asp-for="Pedido.ObservacaoPedido" class="form-control" maxlenght="200">Digite as observações do pedido</textarea>
+                <span asp-validation-for="Pedido.ObservacaoPedido" class="text-danger"></span>
+            </div>
         </div>
     </div>
 

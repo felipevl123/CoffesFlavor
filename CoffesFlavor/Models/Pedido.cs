@@ -21,6 +21,9 @@ namespace CoffesFlavor.Models
         [StringLength(50)]
         public string OpcaoPagamento { get; set; }
 
+        [StringLength(200)]
+        public string ObservacaoPedido { get; set; }
+
         [Required(ErrorMessage = "Informe o seu endereço")]
         [StringLength(100)]
         [Display(Name = "Endereço")]

@@ -161,10 +161,10 @@ namespace CoffesFlavor.Controllers
 
             av.Pedido = pedido;
 
-            if (String.IsNullOrEmpty(av.FeedBack))
+            if (String.IsNullOrEmpty(av.Nota))
             {
                 ModelState
-                    .AddModelError("", "Preencha o campo de avaliação");
+                    .AddModelError("", "Preencha o campo de Nota");
             }
 
             if (ModelState.IsValid)
@@ -186,7 +186,8 @@ namespace CoffesFlavor.Controllers
                 NomeDoUsuario = pedidoAvaliado.Pedido.Nome,
                 NumeroDoPedido = pedidoAvaliado.PedidoId,
                 DataDeEntrega = (DateTime)pedidoAvaliado.Pedido.PedidoEntregueEm,
-                FeedBack = pedidoAvaliado.FeedBackCliente
+                FeedBack = pedidoAvaliado.FeedBackCliente,
+                Nota = pedidoAvaliado.Nota
             };
 
             return View(avaliacao);

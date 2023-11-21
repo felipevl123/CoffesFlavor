@@ -2,10 +2,13 @@
 
 @if (Model.CarrinhoCompra.CarrinhoCompraItens.Count > 0)
 {
-    <a asp-controller="CarrinhoCompra" asp-action="Index">
-        <span><img src="~/images/cart-5-16.ico" /></span>
-        <span style="color:white">
-            @Model.CarrinhoCompra.CarrinhoCompraItens.Count
-        </span>
-    </a>
+    <ul class="nav navbar-nav navbar-left">
+        <a asp-controller="CarrinhoCompra" asp-action="Index" class="nav-link btn btn-link py-0">
+            @*<span><img src="~/images/cart-5-16.ico" /></span>*@
+            <strong>Meu Carrinho</strong>
+            <span style="color:white">
+                @Model.CarrinhoCompra.CarrinhoCompraItens.Count
+            </span>
+        </a>
+    </ul>
 }
