@@ -79,6 +79,7 @@ namespace CoffesFlavor.Controllers
                 return RedirectToAction("Index", "Favorito");
             }
 
+            TempData["Alerta"] = "Seu Produto foi adicionado aos favoritos";
             _context.ProdutosFavoritos.Add(produto);
             _context.SaveChanges();
 
@@ -121,6 +122,7 @@ namespace CoffesFlavor.Controllers
                 return RedirectToAction("Index", "Favorito");
             }
 
+            TempData["Alerta"] = "Produto não estava adicionado aos favoritos";
             return RedirectToAction("Index", "Favorito");
 
 
