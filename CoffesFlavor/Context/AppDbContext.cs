@@ -17,7 +17,12 @@ namespace CoffesFlavor.Context
         public DbSet<CarrinhoCompraItem> CarrinhoCompraItens { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<PedidoDetalhe> PedidoDetalhes { get; set; }
-
-
+        public DbSet<PedidosHistorico> PedidosHistoricos { get; set; }
+        public DbSet<StatusPedido> StatusPedido { get; set; }
+        public DbSet<ContaDetalhe> ContaDetalhes { get; set; }
+        public DbSet<CupomDesconto> CupomDesconto { get; set; }
+        public DbSet<PedidosComDesconto> PedidosComDesconto { get; set; }
+        public DbSet<AvaliacaoPedido> AvaliacaoPedidos { get; set; }
+        public DbSet<ProdutoFavorito> ProdutosFavoritos { get; set; }
     }
 }

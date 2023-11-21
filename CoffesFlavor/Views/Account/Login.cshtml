@@ -7,6 +7,10 @@
             <div class="row">
                 <div class="col-10 col-md-10 col-lg-10">
                     <h4>Login</h4>
+                    @if(@TempData.ContainsKey("Sucesso")){
+                        <h3 class="text-danger">@TempData["Sucesso"]</h3>
+                    }
+
                     <form asp-controller="Account" 
                     asp-action="Login" method="post" class="form-horizontal" role="form">
                         <hr/>
@@ -29,10 +33,16 @@
                         <br />
                         <div class="form-group">
                             <div class="col-md-8">
-                                <input type="submit" class="btn btn-success" value="Log in" />
+                                <input type="submit" class="btn btn-outline-dark" style="background-color:#D9BBA0" value="Log in" />
                             </div>
                         </div>
                     </form>
+                    <p>
+                        Ainda não é cadastrado? <a asp-action="Register">Clique aqui</a> para se cadastrar.
+                    </p>
+                    <p>
+                        Esqueceu sua senha? <a asp-action="EsqueciSenha">Clique aqui</a> redefinir a senha.
+                    </p>
                 </div>
             </div>
         </td>

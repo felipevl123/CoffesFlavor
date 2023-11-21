@@ -1,6 +1,8 @@
 ﻿using CoffesFlavor.Context;
 using CoffesFlavor.Models;
 using CoffesFlavor.Repositories.Interfaces;
+using CoffesFlavor.Services;
+using System.Security.Claims;
 
 namespace CoffesFlavor.Repositories
 {
@@ -8,17 +10,35 @@ namespace CoffesFlavor.Repositories
     {
         private readonly AppDbContext _context;
         private readonly CarrinhoCompra _carrinhoCompra;
+        private readonly HttpServiceClaimPrincipalAccessor _principalAccessor;
 
-        public PedidoRepository(AppDbContext context, CarrinhoCompra carrinhoCompra)
+
+        public PedidoRepository(AppDbContext context, CarrinhoCompra carrinhoCompra,
+            HttpServiceClaimPrincipalAccessor principalAccessor)
         {
             _context = context;
             _carrinhoCompra = carrinhoCompra;
+            _principalAccessor = principalAccessor;
         }
 
         public void CriaPedido(Pedido pedido)
         {
+            pedido.StatusPedidoId = 1;
+            var userId = _principalAccessor.GetClaim();
+
             pedido.PedidoEnviado = DateTime.Now;
+            pedido.Email = _context.Users
+                .Where(u => u.Id == userId).First().Email;
+            pedido.Telefone = _context.Users
+                .Where(u => u.Id == userId).First().PhoneNumber;
+
             _context.Pedidos.Add(pedido);
+            _context.PedidosHistoricos
+                .Add(new PedidosHistorico
+                {
+                    Pedido = pedido,
+                    AspNetUsersId = userId
+                });
             _context.SaveChanges();
 
             var carrinhoCompraItens = _carrinhoCompra.CarrinhoCompraItens;
@@ -36,7 +56,8 @@ namespace CoffesFlavor.Repositories
             }
 
             _context.SaveChanges();
-            
+
         }
+
     }
 }

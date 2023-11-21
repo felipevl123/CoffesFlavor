@@ -4,6 +4,7 @@ using CoffesFlavor.Models;
 using CoffesFlavor.Repositories;
 using CoffesFlavor.Repositories.Interfaces;
 using CoffesFlavor.Services;
+using CoffesFlavor.Settings;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ReflectionIT.Mvc.Paging;
@@ -24,16 +25,28 @@ public class Startup
         services.AddDbContext<AppDbContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddIdentity<IdentityUser, IdentityRole>()
+        services.AddIdentity<IdentityUser, IdentityRole>(options =>
+        options.SignIn.RequireConfirmedEmail = true)
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
 
         services.Configure<ConfigurationImagens>(Configuration.GetSection("ConfigurationPastaImagens"));
 
+        //services.Configure<GmailSettings>(Configuration.GetSection(nameof (GmailSettings)));
+        services.Configure<SendGridSettings>(Configuration.GetSection(nameof(SendGridSettings)));
+
         services.AddTransient<IProdutoRepository, ProdutoRepository>();
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();
+        services.AddTransient<IPedidosHistoricoRepository, PedidosHistoricoRepository>();
+        services.AddTransient<IContaDetalhesRepository, ContaDetalheRepository>();
+        services.AddTransient<ICupomDescontoRepository, CupomDescontoRepository>();
+        services.AddTransient<IAvaliacaoPedidosRepository, AvaliacaoPedidosRepository>();
+        services.AddTransient<IProdutoFavoritoRepository, ProdutoFavoritoRepository>();
+        services.AddTransient<HttpServiceClaimPrincipalAccessor>();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+        //services.AddSingleton<IEmailService, GmailService>();
+        services.AddSingleton<IEmailService, SendGridService>();
 
         services.AddScoped<RelatorioVendaService>();
         services.AddScoped<GraficoVendasService>();
@@ -47,6 +60,7 @@ public class Startup
         });
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddSingleton<UserSessionService>();
         services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
         services.AddControllersWithViews();

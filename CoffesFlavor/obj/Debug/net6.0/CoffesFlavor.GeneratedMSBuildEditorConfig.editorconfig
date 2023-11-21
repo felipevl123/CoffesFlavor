@@ -9,209 +9,285 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CoffesFlavor
 build_property.RootNamespace = CoffesFlavor
-build_property.ProjectDir = C:\Users\Felipe\OneDrive\Documentos\Projetos\CoffesFlavor\CoffesFlavor\
+build_property.ProjectDir = C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Felipe\OneDrive\Documentos\Projetos\CoffesFlavor\CoffesFlavor
+build_property.MSBuildProjectDirectory = C:\Users\Felipe\OneDrive\Documentos\Projetos\AppTesteCoffeeDev\CoffesFlavor\CoffesFlavor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Create.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Delete.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Details.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Edit.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminCategorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminGrafico/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminGrafico/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminGrafico/VendasMensal.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminGrafico/VendasMensal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc01lbnNhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminGrafico/VendasSemanal.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminGrafico/VendasSemanal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc1NlbWFuYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminImagens/GetImagens.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminImagens/GetImagens.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXEdldEltYWdlbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminImagens/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminImagens/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminImagens/UploadFiles.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminImagens/UploadFiles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXFVwbG9hZEZpbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Create.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Delete.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Details.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Edit.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/PedidoNotFound.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/PedidoNotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXFBlZGlkb05vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/PedidoProdutos.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminPedidos/PedidoProdutos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9zXFBlZGlkb1Byb2R1dG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Create.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdXRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Delete.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdXRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Details.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdXRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Edit.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdXRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminProdutos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdXRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminRelatorioVendas/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminRelatorioVendas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminRelatorioVendas/RelatorioVendasSimples.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/AdminRelatorioVendas/RelatorioVendasSimples.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcUmVsYXRvcmlvVmVuZGFzU2ltcGxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/Admin/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Account/AccessDenied.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Account/Login.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Account/EmailRedefinicaoEnviado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFbWFpbFJlZGVmaW5pY2FvRW52aWFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Account/EsqueciSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFc3F1ZWNpU2VuaGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Account/Register.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Account/RedefinirSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWRlZmluaXJTZW5oYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/CarrinhoCompra/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Account/RegisterSuccessful.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlclN1Y2Nlc3NmdWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/CarrinhoCompra/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9Db21wcmFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Contato/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/ContaDetalhes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFEZXRhbGhlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Contato/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Home/Index.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Favorito/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Pedido/Checkout.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/PedidosHistorico/AvaliarEntrega.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc0hpc3Rvcmljb1xBdmFsaWFyRW50cmVnYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/PedidosHistorico/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc0hpc3Rvcmljb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/PedidosHistorico/FeedBackDetalhe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc0hpc3Rvcmljb1xGZWVkQmFja0RldGFsaGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/PedidosHistorico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc0hpc3Rvcmljb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/PedidosHistorico/PedidoNotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc0hpc3Rvcmljb1xQZWRpZG9Ob3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Pedido/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENoZWNrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Pedido/CheckoutCompleto.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Pedido/CheckoutCompleto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENoZWNrb3V0Q29tcGxldG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Produto/Details.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Produto/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Produto/List.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Produto/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/Components/CarrinhoCompraResumo/Default.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/Components/CarrinhoCompraResumo/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FycmluaG9Db21wcmFSZXN1bW9cRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/Components/CategoriaMenu/Default.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/Components/CategoriaMenu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcmlhTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/Error.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_Carousel.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_Carousel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJvdXNlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_Footer.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_ContaDetalhesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db250YURldGFsaGVzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_FavoritosPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GYXZvcml0b3NQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_HistoricoPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IaXN0b3JpY29QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_HistoricoPedAcompanhamento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IaXN0b3JpY29QZWRBY29tcGFuaGFtZW50by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_HistoricoPedFinalizado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IaXN0b3JpY29QZWRGaW5hbGl6YWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_ProdutosResumo.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_MenuFiltroHistorico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51RmlsdHJvSGlzdG9yaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_ProdutosResumo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdXRvc1Jlc3Vtby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/_ViewImports.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Suporte/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vwb3J0ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Suporte/SolicitacaoSuccessful.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vwb3J0ZVxTb2xpY2l0YWNhb1N1Y2Nlc3NmdWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/_ViewStart.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Felipe/OneDrive/Documentos/Projetos/CoffesFlavor/CoffesFlavor/Views/Shared/_Layout.cshtml]
+[C:/Users/Felipe/OneDrive/Documentos/Projetos/AppTesteCoffeeDev/CoffesFlavor/CoffesFlavor/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qa2z1tq4yt

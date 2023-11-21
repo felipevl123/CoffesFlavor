@@ -1,0 +1,68 @@
+﻿@model PedidosListHistoricoViewModel
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <h3>Pedidos em andamento</h3>
+            <th>
+                N° do Pedido
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Cidade
+            </th>
+            <th>
+                Preço Total
+            </th>
+            <th>
+                Data do pedido
+            </th>
+            <th>
+                Pedido entregue em
+            </th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+
+        @foreach (var pedido in Model.PedidosHistorico)
+        {
+            if (!pedido.Pedido.PedidoEntregueEm.HasValue)
+            {
+                <tr>
+                    <td>
+                        <p>@pedido.Pedido.PedidoId</p>
+                        @* <a asp-action="Details" asp-route-id="@pedido.Pedido.PedidoId">
+                @pedido.Pedido.PedidoId
+                </a> *@
+                        @*<p></p>*@
+                    </td>
+                    <td>
+                        <p>@pedido.Pedido.Nome</p>
+                    </td>
+                    <td>
+                        <p>@pedido.Pedido.Cidade</p>
+                    </td>
+                    <td>
+                        <p>R$ @pedido.Pedido.PedidoTotal</p>
+                    </td>
+                    <td>
+                        <p>@pedido.Pedido.PedidoEnviado</p>
+                    </td>
+                    <td>
+                        <p>@pedido.Pedido.PedidoEntregueEm</p>
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@pedido.Pedido.PedidoId">
+                            Acompanhar Pedido
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

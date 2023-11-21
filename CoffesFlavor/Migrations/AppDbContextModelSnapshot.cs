@@ -22,6 +22,33 @@ namespace CoffesFlavor.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("CoffesFlavor.Models.AvaliacaoPedido", b =>
+                {
+                    b.Property<int>("AvaliacaoPedidoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AvaliacaoPedidoId"));
+
+                    b.Property<string>("FeedBackCliente")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Nota")
+                        .IsRequired()
+                        .HasMaxLength(1)
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<int>("PedidoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AvaliacaoPedidoId");
+
+                    b.HasIndex("PedidoId");
+
+                    b.ToTable("AvaliacaoPedidos");
+                });
+
             modelBuilder.Entity("CoffesFlavor.Models.CarrinhoCompraItem", b =>
                 {
                     b.Property<int>("CarrinhoCompraItemId")
@@ -70,6 +97,67 @@ namespace CoffesFlavor.Migrations
                     b.ToTable("Categorias");
                 });
 
+            modelBuilder.Entity("CoffesFlavor.Models.ContaDetalhe", b =>
+                {
+                    b.Property<int>("ContaDetalheId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContaDetalheId"));
+
+                    b.Property<string>("AspNetUsersId")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("DataDeNascimento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EndereçoCompleto")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Genero")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContaDetalheId");
+
+                    b.HasIndex("IdentityUserId");
+
+                    b.ToTable("ContaDetalhes");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.CupomDesconto", b =>
+                {
+                    b.Property<int>("CupomDescontoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CupomDescontoId"));
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Cupom")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<decimal>("Desconto")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("CupomDescontoId");
+
+                    b.ToTable("CupomDesconto");
+                });
+
             modelBuilder.Entity("CoffesFlavor.Models.Pedido", b =>
                 {
                     b.Property<int>("PedidoId")
@@ -88,7 +176,6 @@ namespace CoffesFlavor.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -110,6 +197,15 @@ namespace CoffesFlavor.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("ObservacaoPedido")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("OpcaoPagamento")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<DateTime?>("PedidoEntregueEm")
                         .HasColumnType("datetime2");
 
@@ -124,8 +220,10 @@ namespace CoffesFlavor.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<int>("StatusPedidoId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Telefone")
-                        .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
@@ -133,6 +231,8 @@ namespace CoffesFlavor.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("PedidoId");
+
+                    b.HasIndex("StatusPedidoId");
 
                     b.ToTable("Pedidos");
                 });
@@ -164,6 +264,56 @@ namespace CoffesFlavor.Migrations
                     b.HasIndex("ProdutoId");
 
                     b.ToTable("PedidoDetalhes");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosComDesconto", b =>
+                {
+                    b.Property<int>("PedidosComDescontoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PedidosComDescontoId"));
+
+                    b.Property<int>("CupomDescontoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PedidoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PedidosComDescontoId");
+
+                    b.HasIndex("CupomDescontoId");
+
+                    b.HasIndex("PedidoId");
+
+                    b.ToTable("PedidosComDesconto");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosHistorico", b =>
+                {
+                    b.Property<int>("PedidosHistoricoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PedidosHistoricoId"));
+
+                    b.Property<string>("AspNetUsersId")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("PedidoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PedidosHistoricoId");
+
+                    b.HasIndex("IdentityUserId");
+
+                    b.HasIndex("PedidoId");
+
+                    b.ToTable("PedidosHistoricos");
                 });
 
             modelBuilder.Entity("CoffesFlavor.Models.Produto", b =>
@@ -214,6 +364,47 @@ namespace CoffesFlavor.Migrations
                     b.HasIndex("CategoriaId");
 
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.ProdutoFavorito", b =>
+                {
+                    b.Property<int>("ProdutoFavoritoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProdutoFavoritoId"));
+
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProdutoFavoritoId");
+
+                    b.HasIndex("IdentityUserId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("ProdutosFavoritos");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.StatusPedido", b =>
+                {
+                    b.Property<int>("StatusPedidoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StatusPedidoId"));
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("StatusPedidoId");
+
+                    b.ToTable("StatusPedido");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -414,6 +605,17 @@ namespace CoffesFlavor.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("CoffesFlavor.Models.AvaliacaoPedido", b =>
+                {
+                    b.HasOne("CoffesFlavor.Models.Pedido", "Pedido")
+                        .WithMany()
+                        .HasForeignKey("PedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pedido");
+                });
+
             modelBuilder.Entity("CoffesFlavor.Models.CarrinhoCompraItem", b =>
                 {
                     b.HasOne("CoffesFlavor.Models.Produto", "Produto")
@@ -421,6 +623,26 @@ namespace CoffesFlavor.Migrations
                         .HasForeignKey("ProdutoId");
 
                     b.Navigation("Produto");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.ContaDetalhe", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
+
+                    b.Navigation("IdentityUser");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.Pedido", b =>
+                {
+                    b.HasOne("CoffesFlavor.Models.StatusPedido", "StatusPedido")
+                        .WithMany()
+                        .HasForeignKey("StatusPedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StatusPedido");
                 });
 
             modelBuilder.Entity("CoffesFlavor.Models.PedidoDetalhe", b =>
@@ -442,6 +664,42 @@ namespace CoffesFlavor.Migrations
                     b.Navigation("Produto");
                 });
 
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosComDesconto", b =>
+                {
+                    b.HasOne("CoffesFlavor.Models.CupomDesconto", "CupomDesconto")
+                        .WithMany()
+                        .HasForeignKey("CupomDescontoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoffesFlavor.Models.Pedido", "Pedido")
+                        .WithMany()
+                        .HasForeignKey("PedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CupomDesconto");
+
+                    b.Navigation("Pedido");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.PedidosHistorico", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
+
+                    b.HasOne("CoffesFlavor.Models.Pedido", "Pedido")
+                        .WithMany()
+                        .HasForeignKey("PedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IdentityUser");
+
+                    b.Navigation("Pedido");
+                });
+
             modelBuilder.Entity("CoffesFlavor.Models.Produto", b =>
                 {
                     b.HasOne("CoffesFlavor.Models.Categoria", "Categoria")
@@ -451,6 +709,23 @@ namespace CoffesFlavor.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("CoffesFlavor.Models.ProdutoFavorito", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
+
+                    b.HasOne("CoffesFlavor.Models.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IdentityUser");
+
+                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -1,5 +1,6 @@
 ﻿using CoffesFlavor.Models;
 using CoffesFlavor.Repositories.Interfaces;
+using CoffesFlavor.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,12 +10,15 @@ namespace CoffesFlavor.Controllers
     {
         private readonly IPedidoRepository _pedidoRepository;
         private readonly CarrinhoCompra _carrinhoCompra;
+        private readonly ICupomDescontoRepository _cupomDescontoRepository;
 
-        public PedidoController(IPedidoRepository pedidoRepository, 
-            CarrinhoCompra carrinhoCompra)
+        public PedidoController(IPedidoRepository pedidoRepository,
+            CarrinhoCompra carrinhoCompra,
+            ICupomDescontoRepository cupomDescontoRepository)
         {
             _pedidoRepository = pedidoRepository;
             _carrinhoCompra = carrinhoCompra;
+            _cupomDescontoRepository = cupomDescontoRepository;
         }
 
         [Authorize]
@@ -26,10 +30,24 @@ namespace CoffesFlavor.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Checkout (Pedido pedido)
+        public IActionResult Checkout (PedidoCompletoViewModel pedidoCompletoVW)
         {
             int totalItensPedido = 0;
             decimal precoTotalPedido = 0.0m;
+            var cupomDesconto = new CupomDesconto();
+
+            // Validar se existe Cupom de desconto referente ao que o usuário informou
+            if (!String.IsNullOrEmpty(pedidoCompletoVW.Cupom))
+            {
+                cupomDesconto = _cupomDescontoRepository.ValidaCupom(pedidoCompletoVW.Cupom);
+                if (cupomDesconto == null)
+                {
+                    ModelState
+                        .AddModelError("Cupom", "Seu cupom de desconto não é valido");
+                }
+            }
+             
+
 
             //obtem os itens do Carrinho de Compra do cliente
             List<CarrinhoCompraItem> items = _carrinhoCompra.GetCarrinhoCompraItens();
@@ -50,27 +68,36 @@ namespace CoffesFlavor.Controllers
             }
 
             // atribuir os valores obtidos ao pedido
-            pedido.TotalItensPedido = totalItensPedido;
-            pedido.PedidoTotal = precoTotalPedido;
+            pedidoCompletoVW.Pedido.TotalItensPedido = totalItensPedido;
+            pedidoCompletoVW.Pedido.PedidoTotal = precoTotalPedido;
 
             // valida os dados do pedido
 
             if (ModelState.IsValid)
             {
                 // criar o pedido e os detalhes
-                _pedidoRepository.CriaPedido(pedido);
+                _pedidoRepository.CriaPedido(pedidoCompletoVW.Pedido);
+
+                // Caso exista cupom, diminuir o total do pedido com base no cupom guardado no banco
+                if (!String.IsNullOrEmpty(pedidoCompletoVW.Cupom))
+                {
+                    var valorDescontado = _cupomDescontoRepository.AtualizaDesconto(pedidoCompletoVW.Pedido, cupomDesconto);
+                    ViewBag.ValorDescontado = valorDescontado;
+                    //ViewData["ValorDescontado"] = valorDescontado;
+                }
 
                 // define mensagens ao cliente
                 ViewBag.CheckoutCompletoMensagem = "Obrigado pelo seu pedido :)";
-                ViewBag.TotalPedido = _carrinhoCompra.GetCarrinhoCompraTotal();
+                //ViewBag.TotalPedido = _carrinhoCompra.GetCarrinhoCompraTotal();
+                ViewBag.TotalPedido = pedidoCompletoVW.Pedido.PedidoTotal;
 
                 // limpa o carrinho
                 _carrinhoCompra.LimparCarrinho();
 
                 // exibhe a view com os dados do cliente e do pedido
-                return View("~/Views/Pedido/CheckoutCompleto.cshtml", pedido);
+                return View("~/Views/Pedido/CheckoutCompleto.cshtml", pedidoCompletoVW.Pedido);
             }
-            return View(pedido);
+            return View(pedidoCompletoVW);
         }
     }
 }

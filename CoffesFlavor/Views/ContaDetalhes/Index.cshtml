@@ -1,0 +1,18 @@
+﻿@model ContaDetalheViewModel
+
+
+<h1 class="text-center">Minha conta</h1>
+<hr />
+<div class="text-center">
+    <h2>Usuário : @Html.DisplayFor(model => @Model.Conta.UserName) </h2>
+    <h4>Email : @Html.DisplayFor(model => @Model.Conta.Email)</h4>
+    <h4>Data de nascimento : @Model.Conta.DataDeNascimento.Date.ToShortDateString()</h4>
+</div>
+<br />
+
+<div class="row">
+    <div class="form-group " style="text-align:center">
+        <a asp-action="EsqueciSenha" asp-controller="Account"
+                        class="btn btn-outline-info" style="text-align:center">Trocar senha</a>
+    </div>
+</div>

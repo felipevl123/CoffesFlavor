@@ -1,0 +1,49 @@
+﻿@model AvaliacaoPedidoViewModel
+
+<h1 class="text-center">Avaliação de entrega do produto</h1>
+<hr />
+<div class="row">
+    <div class="col-10 col-md-10 col-lg-10">
+        <form asp-controller="PedidosHistorico"
+              asp-action="AvaliarEntrega" method="post" class="form-horizontal" role="form">
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="row">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Nota</label>
+                    </div>
+                    <select asp-for="Nota" class="custom-select" id="inputGroupSelect01">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span asp-validation-for="Nota" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.FeedBack" class="col-md-2 control-label"></label>
+                <div class="col-md-6">
+                    <textarea asp-for="@Model.FeedBack"
+                              class="form-control" maxlenght="400">Digite sua avalição</textarea>
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="col-md-8">
+                    <input type="submit" class="btn btn-success" value="Enviar" />
+                </div>
+            </div>
+        </form>
+
+        <p>
+            Quer voltar para sua lista de pedidos? 
+            <a asp-action="Index"
+            asp-controller="PedidosHistorico">Clique aqui</a>
+        </p>
+    </div>
+</div>

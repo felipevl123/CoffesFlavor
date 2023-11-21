@@ -10,8 +10,12 @@
             <p>Cliente : <strong>@Model.Nome</strong></p>
             <p>Data do Pedido : <strong>@Model.PedidoEnviado</strong></p>
             <p>Numero do Pedido : <strong>@Model.PedidoId</strong></p>
+            <p>Metodo de pagamento : <strong>@Model.OpcaoPagamento</strong></p>
+            @if(!String.IsNullOrEmpty(Model.ObservacaoPedido)){
+                <p>Observações do pedido: @Model.ObservacaoPedido</p>
+            }
 
-            <table class="table">
+            <table class="table table-bordered table-striped">
                 <tr>
                     <th></th>
                     <th>Quantidade</th>
@@ -28,6 +32,16 @@
                     </tr>
                 }
             </table>
+
+            <br/>
+            @if(ViewBag.ValorDescontado != null)
+            {
+                <h4>
+                    Valor do desconto: 
+                    <strong>@(((decimal)ViewBag.ValorDescontado).ToString("C2"))</strong>
+                </h4>
+            }
+            
 
             <h4>Valor total do Pedido: 
                 <strong>@(((decimal)ViewBag.TotalPedido).ToString("C2"))</strong></h4>

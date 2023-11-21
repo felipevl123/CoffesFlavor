@@ -1,9 +1,11 @@
-﻿@model LoginViewModel
+﻿@model RegisterViewModel
 
 <table>
     <tr>
-        <td><img src="~/images/registro1.jpg" 
-            alt="Registrar usuário" width="80" height="60" /></td>
+        <td>
+            <img src="~/images/registro1.jpg"
+                 alt="Registrar usuário" width="80" height="60" />
+        </td>
         <td>
             <div class="col-md-12 col-lg-12">
                 <h4>Registrar usuário</h4>
@@ -16,12 +18,28 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Password"></label>
+                        <label class="text-danger" style="font-size:smaller">Min. 1 Caracter Especial, letra maiscula, miniscula e numero.</label>
                         <input asp-for="Password" class="form-control" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber"></label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DataDeNascimento"></label>
+                        <input asp-for="DataDeNascimento" type="date" class="form-control" />
+                        <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
+                    </div>
                     <br />
                     <div class="form-group">
-                        <input type="submit" class="btn btn-success" value="Registrar" />
+                        <input type="submit" class="btn btn-outline-dark" style="background-color:#D9BBA0"  value="Registrar" />
                     </div>
                 </form>
             </div>
